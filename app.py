@@ -17,7 +17,7 @@ def contact():
         message = request.form['message']
         timestamp = datetime.now().isoformat()
 
-        log_file = os.path.join(log_dir, 'user_logs.txt')
+        log_file = ( 'user_logs.txt')
 
         with open(log_file, 'a') as f:
             f.write(f"\n[{timestamp}] Name: {name}, Message: '{message}' from Flask server.")
